@@ -17,6 +17,13 @@ package server
 import (
 	"context"
 	"fmt"
+	"net/http"
+	"os"
+	"os/signal"
+	"sort"
+	"syscall"
+	"time"
+
 	"github.com/lf-edge/ekuiper/internal/binder/function"
 	"github.com/lf-edge/ekuiper/internal/binder/io"
 	"github.com/lf-edge/ekuiper/internal/binder/meta"
@@ -24,13 +31,7 @@ import (
 	"github.com/lf-edge/ekuiper/internal/pkg/store"
 	"github.com/lf-edge/ekuiper/internal/processor"
 	"github.com/lf-edge/ekuiper/internal/topo/connection/factory"
-	"net/http"
-	"os"
-	"os/signal"
-	"path/filepath"
-	"sort"
-	"syscall"
-	"time"
+	"github.com/lf-edge/ekuiper/pkg/api"
 )
 
 var (
@@ -41,41 +42,10 @@ var (
 	streamProcessor *processor.StreamProcessor
 )
 
-func createPaths() {
-	dataDir, err := conf.GetDataLoc()
-	if err != nil {
-		panic(err)
-	}
-	dirs := []string{"uploads", "sources", "sinks", "functions", "services", "services/schemas", "connections"}
-
-	for _, v := range dirs {
-		// Create dir if not exist
-		realDir := filepath.Join(dataDir, v)
-		if _, err := os.Stat(realDir); os.IsNotExist(err) {
-			if err := os.MkdirAll(realDir, os.ModePerm); err != nil {
-				panic(err)
-			}
-		}
-	}
-
-	files := []string{"connections/connection.yaml"}
-	for _, v := range files {
-		// Create dir if not exist
-		realFile := filepath.Join(dataDir, v)
-		if _, err := os.Stat(realFile); os.IsNotExist(err) {
-			if _, err := os.Create(realFile); err != nil {
-				panic(err)
-			}
-		}
-	}
-
-}
-
-func StartUp(Version, LoadFileType string) {
+func StartUp(Version, LoadFileType string, sources map[string]api.Source, sinks map[string]api.Sink) {
 	version = Version
 	conf.LoadFileType = LoadFileType
 	startTimeStamp = time.Now().Unix()
-	createPaths()
 	conf.InitConf()
 	factory.InitClientsFactory()
 
@@ -99,6 +69,17 @@ func StartUp(Version, LoadFileType string) {
 	if err != nil {
 		panic(err)
 	}
+
+	m := io.GetManager()
+
+	for k, v := range sources {
+		m.SetSource(k, v)
+	}
+
+	for k, v := range sinks {
+		m.SetSink(k, v)
+	}
+
 	err = io.Initialize(entries)
 	if err != nil {
 		panic(err)

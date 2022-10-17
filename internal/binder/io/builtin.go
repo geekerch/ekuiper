@@ -72,6 +72,14 @@ func (m *Manager) Sink(name string) (api.Sink, error) {
 	return nil, nil
 }
 
+func (m *Manager) SetSource(name string, source api.Source) {
+	sources[name] = func() api.Source { return source }
+}
+
+func (m *Manager) SetSink(name string, sink api.Sink) {
+	sinks[name] = func() api.Sink { return sink }
+}
+
 var m = &Manager{}
 
 func GetManager() *Manager {
