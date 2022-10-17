@@ -52,7 +52,7 @@ func InitManager() (*Manager, error) {
 	mutex.Lock()
 	defer mutex.Unlock()
 	if singleton == nil {
-		dir := "data/services"
+		dir := "etc/services"
 		if kconf.IsTesting {
 			dir = "service/test"
 		}
