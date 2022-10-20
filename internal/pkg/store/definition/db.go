@@ -23,6 +23,7 @@ type Config struct {
 	Type   string
 	Redis  RedisConfig
 	Sqlite SqliteConfig
+	Pg     PgConfig
 }
 
 type RedisConfig struct {
@@ -35,4 +36,13 @@ type RedisConfig struct {
 type SqliteConfig struct {
 	Path string
 	Name string
+}
+
+type PgConfig struct {
+	Host     string
+	Port     int
+	Username string
+	Password string
+	Database string
+	SslMode  string
 }

@@ -16,14 +16,15 @@ package conf
 
 import (
 	"fmt"
-	"github.com/lestrrat-go/file-rotatelogs"
-	"github.com/lf-edge/ekuiper/pkg/api"
-	"github.com/lf-edge/ekuiper/pkg/errorx"
-	"github.com/sirupsen/logrus"
 	"io"
 	"os"
 	"path"
 	"time"
+
+	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
+	"github.com/lf-edge/ekuiper/pkg/api"
+	"github.com/lf-edge/ekuiper/pkg/errorx"
+	"github.com/sirupsen/logrus"
 )
 
 const ConfFileName = "kuiper.yaml"
@@ -144,6 +145,14 @@ type KuiperConf struct {
 		}
 		Sqlite struct {
 			Name string `yaml:"name"`
+		}
+		Pg struct {
+			Host     string `yaml:"host"`
+			Port     int    `yaml:"port"`
+			Username string `yaml:"username"`
+			Password string `yaml:"passowrd"`
+			Database string `yaml:"database"`
+			SslMode  string `yaml:"sslMode"`
 		}
 	}
 	Portable struct {
