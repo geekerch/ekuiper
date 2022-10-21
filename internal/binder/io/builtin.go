@@ -18,7 +18,6 @@ import (
 	"github.com/lf-edge/ekuiper/internal/topo/memory"
 	"github.com/lf-edge/ekuiper/internal/topo/neuron"
 	"github.com/lf-edge/ekuiper/internal/topo/sink"
-	"github.com/lf-edge/ekuiper/internal/topo/source"
 	"github.com/lf-edge/ekuiper/pkg/api"
 )
 
@@ -28,21 +27,21 @@ type NewSinkFunc func() api.Sink
 
 var (
 	sources = map[string]NewSourceFunc{
-		"mqtt":     func() api.Source { return &source.MQTTSource{} },
-		"httppull": func() api.Source { return &source.HTTPPullSource{} },
-		"httppush": func() api.Source { return &source.HTTPPushSource{} },
-		"file":     func() api.Source { return &source.FileSource{} },
-		"memory":   func() api.Source { return memory.GetSource() },
-		"neuron":   func() api.Source { return neuron.GetSource() },
+		// "mqtt":     func() api.Source { return &source.MQTTSource{} },
+		// "httppull": func() api.Source { return &source.HTTPPullSource{} },
+		// "httppush": func() api.Source { return &source.HTTPPushSource{} },
+		// "file":     func() api.Source { return &source.FileSource{} },
+		"memory": func() api.Source { return memory.GetSource() },
+		"neuron": func() api.Source { return neuron.GetSource() },
 	}
 	sinks = map[string]NewSinkFunc{
 		"log":         sink.NewLogSink,
 		"logToMemory": sink.NewLogSinkToMemory,
-		"mqtt":        func() api.Sink { return &sink.MQTTSink{} },
-		"rest":        func() api.Sink { return &sink.RestSink{} },
-		"nop":         func() api.Sink { return &sink.NopSink{} },
-		"memory":      func() api.Sink { return memory.GetSink() },
-		"neuron":      func() api.Sink { return neuron.GetSink() },
+		// "mqtt":        func() api.Sink { return &sink.MQTTSink{} },
+		// "rest":        func() api.Sink { return &sink.RestSink{} },
+		// "nop":         func() api.Sink { return &sink.NopSink{} },
+		// "memory":      func() api.Sink { return memory.GetSink() },
+		// "neuron":      func() api.Sink { return neuron.GetSink() },
 	}
 	lookupSources = map[string]NewLookupSourceFunc{
 		"memory": func() api.LookupSource { return memory.GetLookupSource() },
