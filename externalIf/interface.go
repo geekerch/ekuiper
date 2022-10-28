@@ -1,6 +1,7 @@
 package externalIf
 
 import (
+	"github.com/lf-edge/ekuiper/externalIf/rest"
 	"github.com/lf-edge/ekuiper/internal/conf"
 	"github.com/lf-edge/ekuiper/internal/server"
 	"github.com/lf-edge/ekuiper/pkg/api"
@@ -75,9 +76,13 @@ func initConf(config Config) {
 	conf.Config.Store.Pg.SslMode = config.Store.SslMode
 
 	conf.Config.Portable.PythonBin = "python"
+	*conf.Log = *config.Log
 }
 
 func ServerStartUp(config Config) {
 	initConf(config)
-	server.ExternalStartUp(config.Version, config.Sources, config.Sinks)
+	ruleProcessor, streamProcessor, registry := server.ExternalStartUp(config.Version, config.Sources, config.Sinks)
+	rest.SetRuleProcessor(ruleProcessor)
+	rest.SetStreamProcessor(streamProcessor)
+	rest.SetRuleRegistry(registry)
 }
