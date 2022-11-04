@@ -166,6 +166,12 @@ func DeleteRule(name string) (result string) {
 	} else {
 		result = fmt.Sprintf("Rule %s was not found.", name)
 	}
+
+	_, err := ruleProcessor.ExecDrop(name)
+	if err != nil {
+		return
+	}
+
 	return
 }
 
