@@ -10,7 +10,7 @@ import (
 	"github.com/lf-edge/ekuiper/pkg/infra"
 )
 
-func CreateRule(body string) error {
+func CreateRule(body string, enable bool) error {
 
 	r, err := ruleProcessor.ExecCreate("", body)
 
@@ -19,6 +19,10 @@ func CreateRule(body string) error {
 		return err
 	} else {
 		fmt.Printf("Rule %s was created successfully.", r.Id)
+	}
+
+	if !enable {
+		return nil
 	}
 
 	panicOrError := infra.SafeRun(func() error {
