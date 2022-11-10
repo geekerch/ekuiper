@@ -16,6 +16,7 @@ package operator
 
 import (
 	"fmt"
+
 	"github.com/lf-edge/ekuiper/internal/xsql"
 	"github.com/lf-edge/ekuiper/pkg/api"
 	"github.com/lf-edge/ekuiper/pkg/cast"
@@ -52,7 +53,7 @@ func (p *Preprocessor) Apply(ctx api.StreamContext, data interface{}, _ *xsql.Fu
 		return fmt.Errorf("expect tuple data type")
 	}
 
-	log.Debugf("preprocessor receive %s", tuple.Message)
+	// log.Debugf("preprocessor receive %s", tuple.Message)
 	var (
 		result map[string]interface{}
 		err    error

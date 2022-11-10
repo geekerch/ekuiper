@@ -16,6 +16,7 @@ package operator
 
 import (
 	"fmt"
+
 	"github.com/lf-edge/ekuiper/internal/xsql"
 	"github.com/lf-edge/ekuiper/pkg/api"
 	"github.com/lf-edge/ekuiper/pkg/ast"
@@ -32,13 +33,19 @@ type FilterOp struct {
  */
 func (p *FilterOp) Apply(ctx api.StreamContext, data interface{}, fv *xsql.FunctionValuer, afv *xsql.AggregateFunctionValuer) interface{} {
 	log := ctx.GetLogger()
-	log.Debugf("filter plan receive %s", data)
+	// log.Debugf("filter plan receive %s", data)
 	switch input := data.(type) {
 	case error:
 		return input
 	case xsql.TupleRow:
 		ve := &xsql.ValuerEval{Valuer: xsql.MultiValuer(input, fv)}
 		result := ve.Eval(p.Condition)
+		log.Debug(result)
+		tt := p.Condition.(*ast.BinaryExpr)
+
+		log.Debug(tt.LHS)
+		log.Debug(tt.OP)
+		log.Debug(tt.RHS)
 		switch r := result.(type) {
 		case error:
 			return fmt.Errorf("run Where error: %s", r)
