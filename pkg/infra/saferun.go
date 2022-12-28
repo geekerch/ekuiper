@@ -51,6 +51,7 @@ func SafeRun(fn func() error) (err error) {
 // It is usually the error outlet of a op/rule.
 func DrainError(ctx api.StreamContext, err error, errCh chan<- error) {
 	if err != nil {
+		//if err is nil, don't print log
 		ctx.GetLogger().Errorf("runtime error: %v", err)
 	}
 
