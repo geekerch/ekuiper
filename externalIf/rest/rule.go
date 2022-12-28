@@ -179,7 +179,7 @@ func DeleteRule(name string) (result string) {
 	return
 }
 
-func UpdateRule(name string, body string) error {
+func UpdateRule(name string, body string, status bool) error {
 	_, err := ruleProcessor.GetRuleById(name)
 	if err != nil {
 		return err
@@ -193,7 +193,10 @@ func UpdateRule(name string, body string) error {
 		fmt.Printf("Rule %s was updated successfully.", r.Id)
 	}
 
-	err = restartRule(name)
+	//only restart when rule state is true
+	if status {
+		err = restartRule(name)
+	}
 
 	return err
 }
