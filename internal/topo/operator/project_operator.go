@@ -16,6 +16,7 @@ package operator
 
 import (
 	"fmt"
+
 	"github.com/lf-edge/ekuiper/internal/binder/function"
 	"github.com/lf-edge/ekuiper/internal/xsql"
 	"github.com/lf-edge/ekuiper/pkg/api"
@@ -43,8 +44,8 @@ type ProjectOp struct {
 //  input: *xsql.Tuple| xsql.Collection
 // output: []map[string]interface{}
 func (pp *ProjectOp) Apply(ctx api.StreamContext, data interface{}, fv *xsql.FunctionValuer, afv *xsql.AggregateFunctionValuer) interface{} {
-	log := ctx.GetLogger()
-	log.Debugf("project plan receive %s", data)
+	// log := ctx.GetLogger()
+	//	log.Debugf("project plan receive %s", data)
 	switch input := data.(type) {
 	case error:
 		return input

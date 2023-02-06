@@ -17,14 +17,15 @@ package node
 import (
 	"context"
 	"fmt"
+	"sync"
+	"time"
+
 	"github.com/lf-edge/ekuiper/internal/binder/io"
 	"github.com/lf-edge/ekuiper/internal/conf"
 	kctx "github.com/lf-edge/ekuiper/internal/topo/context"
 	"github.com/lf-edge/ekuiper/internal/topo/state"
 	"github.com/lf-edge/ekuiper/pkg/api"
 	"github.com/lf-edge/ekuiper/pkg/infra"
-	"sync"
-	"time"
 )
 
 //// Package vars and funcs
@@ -226,7 +227,7 @@ func newSourceInstanceChannels(bl int) *sourceInstanceChannels {
 
 func (ss *sourceSingleton) run(name, key string) {
 	logger := ss.ctx.GetLogger()
-	logger.Infof("Start source %s shared instance %s successfully", name, key)
+	logger.Debugf("Start source %s shared instance %s successfully", name, key)
 	for {
 		select {
 		case <-ss.ctx.Done():

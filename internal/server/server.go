@@ -119,10 +119,10 @@ func StartUp(Version, LoadFileType string, sources map[string]api.Source, sinks 
 	}()
 
 	// Start extend services
-	for k, v := range servers {
-		logger.Infof("start service %s", k)
-		v.serve()
-	}
+	// for k, v := range servers {
+	// 	logger.Infof("start service %s", k)
+	// 	v.serve()
+	// }
 
 	//Startup message
 	restHttpType := "http"

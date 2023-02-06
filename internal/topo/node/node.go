@@ -16,6 +16,7 @@ package node
 
 import (
 	"fmt"
+
 	"github.com/lf-edge/ekuiper/internal/topo/checkpoint"
 	"github.com/lf-edge/ekuiper/internal/topo/node/metric"
 	"github.com/lf-edge/ekuiper/internal/xsql"
@@ -108,12 +109,11 @@ func (o *defaultNode) doBroadcast(val interface{}) {
 		case <-o.ctx.Done():
 			// rule stop so stop waiting
 		default:
-			o.ctx.GetLogger().Errorf("drop message from %s to %s", o.name, name)
+			o.ctx.GetLogger().Errorf("drop message from %s to %s, out %v, value %v, cap: %v", o.name, name, out, val, cap(out))
 		}
 		switch vt := val.(type) {
 		case xsql.Collection:
 			val = vt.Clone()
-			break
 		case xsql.TupleRow:
 			val = vt.Clone()
 		}

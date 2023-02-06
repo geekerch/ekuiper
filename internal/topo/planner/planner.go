@@ -17,6 +17,7 @@ package planner
 import (
 	"errors"
 	"fmt"
+
 	"github.com/lf-edge/ekuiper/internal/conf"
 	store2 "github.com/lf-edge/ekuiper/internal/pkg/store"
 	"github.com/lf-edge/ekuiper/internal/topo"
@@ -40,7 +41,7 @@ func Plan(rule *api.Rule) (*topo.Topo, error) {
 func PlanSQLWithSourcesAndSinks(rule *api.Rule, sources []*node.SourceNode, sinks []*node.SinkNode) (*topo.Topo, error) {
 	sql := rule.Sql
 
-	conf.Log.Infof("Init rule with options %+v", rule.Options)
+	conf.Log.Debugf("Init rule with options %+v", rule.Options)
 	stmt, err := xsql.GetStatementFromSql(sql)
 	if err != nil {
 		return nil, err

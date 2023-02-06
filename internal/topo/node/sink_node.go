@@ -16,6 +16,9 @@ package node
 
 import (
 	"fmt"
+	"strings"
+	"sync"
+
 	"github.com/lf-edge/ekuiper/internal/binder/io"
 	"github.com/lf-edge/ekuiper/internal/conf"
 	"github.com/lf-edge/ekuiper/internal/topo/context"
@@ -28,8 +31,6 @@ import (
 	"github.com/lf-edge/ekuiper/pkg/errorx"
 	"github.com/lf-edge/ekuiper/pkg/infra"
 	"github.com/lf-edge/ekuiper/pkg/message"
-	"strings"
-	"sync"
 )
 
 type SinkConf struct {
@@ -116,7 +117,7 @@ func (m *SinkNode) Open(ctx api.StreamContext, result chan<- error) {
 			ctx = context.WithValue(ctx.(*context.DefaultContext), context.TransKey, tf)
 
 			m.reset()
-			logger.Infof("open sink node %d instances", m.concurrency)
+			logger.Debugf("open sink node %d instances", m.concurrency)
 			for i := 0; i < m.concurrency; i++ { // workers
 				go func(instance int) {
 					panicOrError := infra.SafeRun(func() error {
