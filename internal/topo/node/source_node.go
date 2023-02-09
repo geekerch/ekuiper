@@ -16,6 +16,9 @@ package node
 
 import (
 	"fmt"
+	"strings"
+	"sync"
+
 	"github.com/lf-edge/ekuiper/internal/conf"
 	"github.com/lf-edge/ekuiper/internal/converter"
 	"github.com/lf-edge/ekuiper/internal/topo/context"
@@ -69,7 +72,7 @@ const OffsetKey = "$$offset"
 func (m *SourceNode) Open(ctx api.StreamContext, errCh chan<- error) {
 	m.ctx = ctx
 	logger := ctx.GetLogger()
-	logger.Infof("open source node %s with option %v", m.name, m.options)
+	logger.Debugf("open source node %s with option %v", m.name, m.options)
 	go func() {
 		panicOrError := infra.SafeRun(func() error {
 			props := nodeConf.GetSourceConf(m.sourceType, m.options)
@@ -102,7 +105,7 @@ func (m *SourceNode) Open(ctx api.StreamContext, errCh chan<- error) {
 			}
 			ctx = context.WithValue(ctx.(*context.DefaultContext), context.DecodeKey, converter)
 			m.reset()
-			logger.Infof("open source node with props %v, concurrency: %d, bufferLength: %d", conf.Printable(m.props), m.concurrency, m.bufferLength)
+			logger.Debugf("open source node with props %v, concurrency: %d, bufferLength: %d", conf.Printable(m.props), m.concurrency, m.bufferLength)
 			for i := 0; i < m.concurrency; i++ { // workers
 				go func(instance int) {
 					poe := infra.SafeRun(func() error {
@@ -135,6 +138,14 @@ func (m *SourceNode) Open(ctx api.StreamContext, errCh chan<- error) {
 							m.close()
 							buffer.Close()
 						}()
+
+						stats, err := metric.NewStatManager(ctx, "source")
+						if err != nil {
+							return err
+						}
+						m.mutex.Lock()
+						m.statManagers = append(m.statManagers, stats)
+						m.mutex.Unlock()
 						logger.Infof("Start source %s instance %d successfully", m.name, instance)
 						for {
 							select {

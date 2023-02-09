@@ -14,7 +14,10 @@
 
 package main
 
-import "github.com/lf-edge/ekuiper/internal/server"
+import (
+	"github.com/lf-edge/ekuiper/internal/server"
+	"github.com/lf-edge/ekuiper/pkg/api"
+)
 
 var (
 	Version      = "unknown"
@@ -22,5 +25,8 @@ var (
 )
 
 func main() {
-	server.StartUp(Version, LoadFileType)
+	sources := map[string]api.Source{}
+
+	sinks := map[string]api.Sink{}
+	server.StartUp(Version, LoadFileType, sources, sinks)
 }

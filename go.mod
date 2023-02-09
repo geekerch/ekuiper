@@ -61,6 +61,7 @@ require (
 	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/lestrrat-go/strftime v1.0.3 // indirect
+	github.com/lib/pq v1.10.7
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect

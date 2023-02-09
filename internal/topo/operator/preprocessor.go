@@ -65,19 +65,18 @@ func (p *Preprocessor) Apply(ctx api.StreamContext, data interface{}, _ *xsql.Fu
 	}
 
 	log.Debugf("preprocessor receive %s", tuple.Message)
-	if p.checkSchema {
-		if !p.isBinary {
-			err := p.validateAndConvert(tuple)
-			if err != nil {
-				return fmt.Errorf("error in preprocessor: %s", err)
-			}
-		} else {
-			for name := range p.streamFields {
-				tuple.Message[name] = tuple.Message[message.DefaultField]
-				delete(tuple.Message, message.DefaultField)
-				break
-			}
+	var (
+		result map[string]interface{}
+		err    error
+	)
+	if !p.isSchemaless && p.streamFields != nil {
+		result, err = p.processField(tuple, nil)
+		if err != nil {
+			return fmt.Errorf("error in preprocessor: %s", err)
 		}
+		tuple.Message = result
+	} else {
+		result = tuple.Message
 	}
 	if p.isEventTime {
 		if t, ok := tuple.Message[p.timestampField]; ok {

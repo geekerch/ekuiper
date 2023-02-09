@@ -16,14 +16,15 @@ package conf
 
 import (
 	"fmt"
-	"github.com/lestrrat-go/file-rotatelogs"
-	"github.com/lf-edge/ekuiper/pkg/api"
-	"github.com/lf-edge/ekuiper/pkg/errorx"
-	"github.com/sirupsen/logrus"
 	"io"
 	"os"
 	"path"
 	"time"
+
+	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
+	"github.com/lf-edge/ekuiper/pkg/api"
+	"github.com/lf-edge/ekuiper/pkg/errorx"
+	"github.com/sirupsen/logrus"
 )
 
 const ConfFileName = "kuiper.yaml"
@@ -112,24 +113,26 @@ func (sc *SourceConf) Validate() error {
 	return e
 }
 
+type Basic struct {
+	Debug          bool     `yaml:"debug"`
+	ConsoleLog     bool     `yaml:"consoleLog"`
+	FileLog        bool     `yaml:"fileLog"`
+	RotateTime     int      `yaml:"rotateTime"`
+	MaxAge         int      `yaml:"maxAge"`
+	Ip             string   `yaml:"ip"`
+	Port           int      `yaml:"port"`
+	RestIp         string   `yaml:"restIp"`
+	RestPort       int      `yaml:"restPort"`
+	RestTls        *tlsConf `yaml:"restTls"`
+	Prometheus     bool     `yaml:"prometheus"`
+	PrometheusPort int      `yaml:"prometheusPort"`
+	PluginHosts    string   `yaml:"pluginHosts"`
+	Authentication bool     `yaml:"authentication"`
+	IgnoreCase     bool     `yaml:"ignoreCase"`
+}
+
 type KuiperConf struct {
-	Basic struct {
-		Debug          bool     `yaml:"debug"`
-		ConsoleLog     bool     `yaml:"consoleLog"`
-		FileLog        bool     `yaml:"fileLog"`
-		RotateTime     int      `yaml:"rotateTime"`
-		MaxAge         int      `yaml:"maxAge"`
-		Ip             string   `yaml:"ip"`
-		Port           int      `yaml:"port"`
-		RestIp         string   `yaml:"restIp"`
-		RestPort       int      `yaml:"restPort"`
-		RestTls        *tlsConf `yaml:"restTls"`
-		Prometheus     bool     `yaml:"prometheus"`
-		PrometheusPort int      `yaml:"prometheusPort"`
-		PluginHosts    string   `yaml:"pluginHosts"`
-		Authentication bool     `yaml:"authentication"`
-		IgnoreCase     bool     `yaml:"ignoreCase"`
-	}
+	Basic  *Basic
 	Rule   api.RuleOption
 	Sink   *SinkConf
 	Source *SourceConf
@@ -144,6 +147,14 @@ type KuiperConf struct {
 		}
 		Sqlite struct {
 			Name string `yaml:"name"`
+		}
+		Pg struct {
+			Host     string `yaml:"host"`
+			Port     int    `yaml:"port"`
+			Username string `yaml:"username"`
+			Password string `yaml:"passowrd"`
+			Database string `yaml:"database"`
+			SslMode  string `yaml:"sslMode"`
 		}
 	}
 	Portable struct {

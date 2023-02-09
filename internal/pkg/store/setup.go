@@ -54,6 +54,14 @@ func SetupWithKuiperConfig(kconf *conf.KuiperConf) error {
 			Path: dir,
 			Name: kconf.Store.Sqlite.Name,
 		},
+		Pg: definition.PgConfig{
+			Host:     kconf.Store.Pg.Host,
+			Port:     kconf.Store.Pg.Port,
+			Username: kconf.Store.Pg.Username,
+			Password: kconf.Store.Pg.Password,
+			Database: kconf.Store.Pg.Database,
+			SslMode:  kconf.Store.Pg.SslMode,
+		},
 	}
 	return Setup(c)
 }

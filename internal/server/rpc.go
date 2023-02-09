@@ -33,6 +33,10 @@ import (
 	"os"
 	"strings"
 	"time"
+
+	"github.com/lf-edge/ekuiper/internal/conf"
+	"github.com/lf-edge/ekuiper/internal/pkg/model"
+	"github.com/lf-edge/ekuiper/internal/topo/sink"
 )
 
 const QueryRuleId = "internal-ekuiper_query_rule"
@@ -361,7 +365,7 @@ func marshalDesc(m interface{}) (string, error) {
 	return dst.String(), nil
 }
 
-func initQuery() {
+func init() {
 	ticker := time.NewTicker(time.Second * 5)
 	go infra.SafeRun(func() error {
 		for {
@@ -371,13 +375,14 @@ func initQuery() {
 					continue
 				}
 
-				n := time.Now()
-				w := 10 * time.Second
-				if v := n.Sub(sink.QR.LastFetch); v >= w {
-					logger.Printf("The client seems no longer fetch the query result, stop the query now.")
-					stopQuery()
+					n := time.Now()
+					w := 10 * time.Second
+					if v := n.Sub(sink.QR.LastFetch); v >= w {
+						logger.Printf("The client seems no longer fetch the query result, stop the query now.")
+						stopQuery()
+					}
 				}
 			}
-		}
-	})
+		})
+	*/
 }

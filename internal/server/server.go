@@ -18,6 +18,13 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"net/http"
+	"os"
+	"os/signal"
+	"sort"
+	"syscall"
+	"time"
+
 	"github.com/lf-edge/ekuiper/internal/binder/function"
 	"github.com/lf-edge/ekuiper/internal/binder/io"
 	"github.com/lf-edge/ekuiper/internal/binder/meta"
@@ -26,8 +33,6 @@ import (
 	"github.com/lf-edge/ekuiper/internal/pkg/store"
 	"github.com/lf-edge/ekuiper/internal/processor"
 	"github.com/lf-edge/ekuiper/internal/topo/connection/factory"
-	"github.com/lf-edge/ekuiper/internal/topo/rule"
-	"github.com/lf-edge/ekuiper/pkg/ast"
 	"net/http"
 	"os"
 	"os/signal"
@@ -81,7 +86,6 @@ func StartUp(Version, LoadFileType string) {
 	version = Version
 	conf.LoadFileType = LoadFileType
 	startTimeStamp = time.Now().Unix()
-	createPaths()
 	conf.InitConf()
 	factory.InitClientsFactory()
 
@@ -108,6 +112,17 @@ func StartUp(Version, LoadFileType string) {
 	if err != nil {
 		panic(err)
 	}
+
+	m := io.GetManager()
+
+	for k, v := range sources {
+		m.SetSource(k, v)
+	}
+
+	for k, v := range sinks {
+		m.SetSink(k, v)
+	}
+
 	err = io.Initialize(entries)
 	if err != nil {
 		panic(err)
@@ -152,10 +167,10 @@ func StartUp(Version, LoadFileType string) {
 	}()
 
 	// Start extend services
-	for k, v := range servers {
-		logger.Infof("start service %s", k)
-		v.serve()
-	}
+	// for k, v := range servers {
+	// 	logger.Infof("start service %s", k)
+	// 	v.serve()
+	// }
 
 	//Startup message
 	restHttpType := "http"
