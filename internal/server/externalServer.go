@@ -11,6 +11,7 @@ import (
 	"github.com/lf-edge/ekuiper/internal/pkg/store"
 	"github.com/lf-edge/ekuiper/internal/processor"
 	"github.com/lf-edge/ekuiper/internal/topo/connection/factory"
+	"github.com/lf-edge/ekuiper/internal/topo/rule"
 	"github.com/lf-edge/ekuiper/pkg/api"
 )
 
@@ -67,7 +68,7 @@ func ExternalStartUp(version string, sources map[string]api.Source, sinks map[st
 	}
 	meta.Bind()
 
-	registry = &RuleRegistry{internal: make(map[string]*RuleState)}
+	registry = &RuleRegistry{internal: make(map[string]*rule.RuleState)}
 	//Start lookup tables
 	streamProcessor.RecoverLookupTable()
 	//Start rules
@@ -78,9 +79,11 @@ func ExternalStartUp(version string, sources map[string]api.Source, sinks map[st
 		var reply string
 		for _, rule := range rules {
 			//err = server.StartRule(rule, &reply)
-			reply = recoverRule(rule)
-			if 0 != len(reply) {
-				logger.Info(reply)
+			if apiRule, err := ruleProcessor.GetRuleById(rule); err != nil {
+				reply = recoverRule(apiRule)
+				if len(reply) != 0 {
+					logger.Info(reply)
+				}
 			}
 		}
 	}

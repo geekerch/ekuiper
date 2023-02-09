@@ -1,0 +1,28 @@
+{
+	"about": {
+		"trial": false,
+		"author": {
+			"name": "EMQ",
+			"email": "contact@emqx.io",
+			"company": "EMQ Technologies Co., Ltd",
+			"website": "https://www.emqx.io"
+		},
+		"helpUrl": {
+      "en_US": "https://github.com/lf-edge/ekuiper/blob/master/docs/en_US/sqls/custom_functions.md",
+      "zh_CN": "https://github.com/lf-edge/ekuiper/blob/master/docs/zh_CN/sqls/custom_functions.md"
+		},
+		"description": {
+			"en_US": "",
+			"zh_CN": ""
+		}
+	},
+	"functions": [{
+		"name": "accumulateWordCount",
+		"example": "accumulateWordCount(col1)",
+		"hint": {
+			"en_US": "This function counts the total number of words",
+			"zh_CN": "该函数统计一共有多少个单词"
+		}
+	}]
+}
+

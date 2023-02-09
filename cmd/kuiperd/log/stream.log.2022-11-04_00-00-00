@@ -1,0 +1,311 @@
+time="2022-11-04 09:56:23" level=warning msg="invalid source.httpServerPort configuration 0, set to 10081" file="conf/conf.go:109"
+time="2022-11-04 09:56:23" level=info msg="register component template" file="server/server.go:62"
+time="2022-11-04 09:56:23" level=info msg="register component meta" file="server/server.go:62"
+time="2022-11-04 09:56:23" level=info msg="register component plugin" file="server/server.go:62"
+time="2022-11-04 09:56:23" level=error msg="plugin random open error: plugin.Open(\"/workspaces/im/ec/pkg/ekuiper/cmd/kuiperd/plugins/sources/Random\"): plugin was built with a different version of package internal/goarch" file="native/manager.go:644"
+time="2022-11-04 09:56:23" level=error msg="plugin file open error: plugin.Open(\"/workspaces/im/ec/pkg/ekuiper/cmd/kuiperd/plugins/sinks/file\"): plugin was built with a different version of package internal/goarch" file="native/manager.go:644"
+time="2022-11-04 09:56:23" level=info msg="register component portable" file="server/server.go:62"
+time="2022-11-04 09:56:23" level=info msg="register component schema" file="server/server.go:62"
+time="2022-11-04 09:56:23" level=warning msg="cannot read schema directory: open /workspaces/im/ec/pkg/ekuiper/cmd/kuiperd/etc/schemas/protobuf: no such file or directory" file="schema/registry.go:57"
+time="2022-11-04 09:56:23" level=info msg="register component service" file="server/server.go:62"
+time="2022-11-04 09:56:23" level=info msg="Loading yaml file for source: mqtt" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:23" level=info msg="Loading yaml file for connection: mqtt" file="meta/yamlConfigMeta.go:64"
+time="2022-11-04 09:56:23" level=info msg="Loading metadata file for source : mqtt_source.json" file="meta/sourceMeta.go:124"
+time="2022-11-04 09:56:23" level=warning msg="cannot find the native plugin edgex in path: invalid name edgex: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: edgex" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for connection: edgex" file="meta/yamlConfigMeta.go:64"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : edgex.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin file in path: invalid name file: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: file" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : file.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin httppull in path: invalid name httppull: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: httppull" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : httppull.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: memory" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : memory.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: neuron" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : neuron.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin random in path: invalid name random: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: random" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : random.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin sql in path: invalid name sql: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: sql" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : sql.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin test in path: invalid name test: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: test" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : test.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin zmq in path: invalid name zmq: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading yaml file for source: zmq" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for source : zmq.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin edgex in path: invalid name edgex: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: edgex.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin file in path: invalid name file: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: file.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin influx in path: invalid name influx: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: influx.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: log.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin memory in path: invalid name memory: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: memory.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin mqtt in path: invalid name mqtt: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: mqtt.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin neuron in path: invalid name neuron: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: neuron.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin nop in path: invalid name nop: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: nop.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: redis.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin rest in path: invalid name rest: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: rest.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin sql in path: invalid name sql: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: sql.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin tdengine in path: invalid name tdengine: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: tdengine.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin zmq in path: invalid name zmq: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=info msg="Loading metadata file for sink: zmq.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 09:56:24" level=info msg="funcMeta file : accumulateWordCount.json" file="meta/func_meta.go:152"
+time="2022-11-04 09:56:24" level=info msg="funcMeta file : countPlusOne.json" file="meta/func_meta.go:152"
+time="2022-11-04 09:56:24" level=info msg="funcMeta file : echo.json" file="meta/func_meta.go:152"
+time="2022-11-04 09:56:24" level=info msg="funcMeta file : geohash.json" file="meta/func_meta.go:152"
+time="2022-11-04 09:56:24" level=info msg="funcMeta file : image.json" file="meta/func_meta.go:152"
+time="2022-11-04 09:56:24" level=info msg="funcMeta file : internal.json" file="meta/func_meta.go:152"
+time="2022-11-04 09:56:24" level=info msg="funcMeta file : labelImage.json" file="meta/func_meta.go:152"
+time="2022-11-04 09:56:24" level=info msg="funcMeta file : windows.json" file="meta/func_meta.go:152"
+time="2022-11-04 09:56:24" level=info msg="uiMsg file : en_US.ini" file="meta/msgUtil.go:52"
+time="2022-11-04 09:56:24" level=info msg="uiMsg file : zh_CN.ini" file="meta/msgUtil.go:52"
+time="2022-11-04 09:56:24" level=info msg="Starting rules" file="server/server.go:96"
+time="2022-11-04 09:56:24" level=info msg="Init rule with options &{IsEventTime:false LateTol:1000 Concurrency:1 BufferLength:1024 SendMetaToSink:false SendError:true Qos:0 CheckpointInterval:300000}" file="planner/planner.go:43"
+time="2022-11-04 09:56:24" level=info msg="Rule achilles1 is replaced." file="processor/rule.go:92"
+time="2022-11-04 09:56:24" level=info msg="Rule achilles1 was started." file="server/server.go:102"
+time="2022-11-04 09:56:24" level=info msg="Opening stream" file="topo/topo.go:137" rule=achilles1
+time="2022-11-04 09:56:24" level=info msg="open sink node 1 instances" file="node/sink_node.go:119" rule=achilles1
+time="2022-11-04 09:56:24" level=info msg="open source node edge with option &{  JSON  iotedge true   false  0 }" file="node/source_node.go:73" rule=achilles1
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin eh in path: invalid name eh: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:52" rule=achilles1
+time="2022-11-04 09:56:24" level=error msg="closing rule achilles1 for error: sink eh not found" file="server/rule_manager.go:119"
+time="2022-11-04 09:56:24" level=error msg="runtime error: <nil>" file="infra/saferun.go:52" rule=achilles1
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=achilles1
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=achilles1
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=achilles1
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=achilles1
+time="2022-11-04 09:56:24" level=info msg="Rule achilles1_release was stopped." file="server/server.go:102"
+time="2022-11-04 09:56:24" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2022-11-04 09:56:24" level=info msg="open source node with props map[format:json key:], concurrency: 1, bufferLength: 102400" file="node/source_node.go:116" rule=achilles1
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin iotedge in path: invalid name iotedge: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:52" rule=achilles1
+time="2022-11-04 09:56:24" level=info msg="Init rule with options &{IsEventTime:false LateTol:0 Concurrency:0 BufferLength:0 SendMetaToSink:true SendError:false Qos:0 CheckpointInterval:0}" file="planner/planner.go:43"
+time="2022-11-04 09:56:24" level=info msg="Rule alarmName is replaced." file="processor/rule.go:92"
+time="2022-11-04 09:56:24" level=info msg="Rule alarmName was started." file="server/server.go:102"
+time="2022-11-04 09:56:24" level=info msg="Opening stream" file="topo/topo.go:137" rule=alarmName
+time="2022-11-04 09:56:24" level=info msg="open source node edge with option &{  JSON  iotedge true   false  0 }" file="node/source_node.go:73" rule=alarmName
+time="2022-11-04 09:56:24" level=info msg="open sink node 1 instances" file="node/sink_node.go:119" rule=alarmName
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin eh in path: invalid name eh: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:52" rule=alarmName
+time="2022-11-04 09:56:24" level=error msg="closing rule alarmName for error: sink eh not found" file="server/rule_manager.go:119"
+time="2022-11-04 09:56:24" level=error msg="runtime error: <nil>" file="infra/saferun.go:52" rule=alarmName
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=alarmName
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=alarmName
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=alarmName
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=alarmName
+time="2022-11-04 09:56:24" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2022-11-04 09:56:24" level=info msg="open source node with props map[format:json key:], concurrency: 1, bufferLength: 102400" file="node/source_node.go:116" rule=alarmName
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin iotedge in path: invalid name iotedge: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:52" rule=alarmName
+time="2022-11-04 09:56:24" level=info msg="Init rule with options &{IsEventTime:false LateTol:0 Concurrency:0 BufferLength:0 SendMetaToSink:true SendError:false Qos:0 CheckpointInterval:0}" file="planner/planner.go:43"
+time="2022-11-04 09:56:24" level=info msg="Rule alarmName_release is replaced." file="processor/rule.go:92"
+time="2022-11-04 09:56:24" level=info msg="Rule alarmName_release was started." file="server/server.go:102"
+time="2022-11-04 09:56:24" level=info msg="Opening stream" file="topo/topo.go:137" rule=alarmName_release
+time="2022-11-04 09:56:24" level=info msg="open source node edge with option &{  JSON  iotedge true   false  0 }" file="node/source_node.go:73" rule=alarmName_release
+time="2022-11-04 09:56:24" level=info msg="open sink node 1 instances" file="node/sink_node.go:119" rule=alarmName_release
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin eh in path: invalid name eh: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:52" rule=alarmName_release
+time="2022-11-04 09:56:24" level=error msg="closing rule alarmName_release for error: sink eh not found" file="server/rule_manager.go:119"
+time="2022-11-04 09:56:24" level=error msg="runtime error: <nil>" file="infra/saferun.go:52" rule=alarmName_release
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=alarmName_release
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=alarmName_release
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=alarmName_release
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=alarmName_release
+time="2022-11-04 09:56:24" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2022-11-04 09:56:24" level=info msg="open source node with props map[format:json key:], concurrency: 1, bufferLength: 102400" file="node/source_node.go:116" rule=alarmName_release
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin iotedge in path: invalid name iotedge: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:52" rule=alarmName_release
+time="2022-11-04 09:56:24" level=info msg="Init rule with options &{IsEventTime:false LateTol:0 Concurrency:0 BufferLength:0 SendMetaToSink:true SendError:false Qos:0 CheckpointInterval:0}" file="planner/planner.go:43"
+time="2022-11-04 09:56:24" level=info msg="Rule alarmName-1667553871429 is replaced." file="processor/rule.go:92"
+time="2022-11-04 09:56:24" level=info msg="Rule alarmName-1667553871429 was started." file="server/server.go:102"
+time="2022-11-04 09:56:24" level=info msg="Opening stream" file="topo/topo.go:137" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=info msg="open source node edge with option &{  JSON  iotedge true   false  0 }" file="node/source_node.go:73" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=info msg="open sink node 1 instances" file="node/sink_node.go:119" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin eh in path: invalid name eh: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:52" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=error msg="closing rule alarmName-1667553871429 for error: sink eh not found" file="server/rule_manager.go:119"
+time="2022-11-04 09:56:24" level=error msg="runtime error: <nil>" file="infra/saferun.go:52" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2022-11-04 09:56:24" level=info msg="open source node with props map[format:json key:], concurrency: 1, bufferLength: 102400" file="node/source_node.go:116" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin iotedge in path: invalid name iotedge: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:52" rule=alarmName-1667553871429
+time="2022-11-04 09:56:24" level=info msg="Init rule with options &{IsEventTime:false LateTol:0 Concurrency:0 BufferLength:0 SendMetaToSink:true SendError:false Qos:0 CheckpointInterval:0}" file="planner/planner.go:43"
+time="2022-11-04 09:56:24" level=info msg="Rule alarmName-1667553871429_release is replaced." file="processor/rule.go:92"
+time="2022-11-04 09:56:24" level=info msg="Rule alarmName-1667553871429_release was started." file="server/server.go:102"
+time="2022-11-04 09:56:24" level=info msg="Opening stream" file="topo/topo.go:137" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="open source node edge with option &{  JSON  iotedge true   false  0 }" file="node/source_node.go:73" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="open sink node 1 instances" file="node/sink_node.go:119" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="register rest endpoint for component template" file="server/rest.go:125"
+time="2022-11-04 09:56:24" level=info msg="register rest endpoint for component meta" file="server/rest.go:125"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin eh in path: invalid name eh: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:52" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=error msg="closing rule alarmName-1667553871429_release for error: sink eh not found" file="server/rule_manager.go:119"
+time="2022-11-04 09:56:24" level=error msg="runtime error: <nil>" file="infra/saferun.go:52" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="register rest endpoint for component plugin" file="server/rest.go:125"
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2022-11-04 09:56:24" level=info msg="open source node with props map[format:json key:], concurrency: 1, bufferLength: 102400" file="node/source_node.go:116" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="register rest endpoint for component portable" file="server/rest.go:125"
+time="2022-11-04 09:56:24" level=warning msg="cannot find the native plugin iotedge in path: invalid name iotedge: not exist" file="native/manager.go:636"
+time="2022-11-04 09:56:24" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:52" rule=alarmName-1667553871429_release
+time="2022-11-04 09:56:24" level=info msg="register rest endpoint for component schema" file="server/rest.go:125"
+time="2022-11-04 09:56:24" level=info msg="register rest endpoint for component service" file="server/rest.go:125"
+time="2022-11-04 09:56:24" level=info msg="start service prometheus" file="server/server.go:123"
+time="2022-11-04 09:56:24" level=info msg="start service rpc" file="server/server.go:123"
+time="2022-11-04 09:56:24" level=info msg="Serving kuiper (version - unknown) on port 20498, and restful api on http://0.0.0.0:9081. \n" file="server/server.go:133"
+time="2022-11-04 10:01:25" level=warning msg="invalid source.httpServerPort configuration 0, set to 10081" file="conf/conf.go:109"
+time="2022-11-04 10:01:25" level=info msg="register component portable" file="server/server.go:62"
+time="2022-11-04 10:01:25" level=info msg="register component schema" file="server/server.go:62"
+time="2022-11-04 10:01:25" level=warning msg="cannot read schema directory: open /workspaces/im/ec/pkg/ekuiper/cmd/kuiperd/etc/schemas/protobuf: no such file or directory" file="schema/registry.go:57"
+time="2022-11-04 10:01:25" level=info msg="register component service" file="server/server.go:62"
+time="2022-11-04 10:01:25" level=info msg="register component template" file="server/server.go:62"
+time="2022-11-04 10:01:25" level=info msg="register component meta" file="server/server.go:62"
+time="2022-11-04 10:01:25" level=info msg="register component plugin" file="server/server.go:62"
+time="2022-11-04 10:01:26" level=error msg="plugin random open error: plugin.Open(\"/workspaces/im/ec/pkg/ekuiper/cmd/kuiperd/plugins/sources/Random\"): plugin was built with a different version of package internal/goarch" file="native/manager.go:644"
+time="2022-11-04 10:01:26" level=error msg="plugin file open error: plugin.Open(\"/workspaces/im/ec/pkg/ekuiper/cmd/kuiperd/plugins/sinks/file\"): plugin was built with a different version of package internal/goarch" file="native/manager.go:644"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: mqtt" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for connection: mqtt" file="meta/yamlConfigMeta.go:64"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : mqtt_source.json" file="meta/sourceMeta.go:124"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin edgex in path: invalid name edgex: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: edgex" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for connection: edgex" file="meta/yamlConfigMeta.go:64"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : edgex.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin file in path: invalid name file: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: file" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : file.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin httppull in path: invalid name httppull: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: httppull" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : httppull.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: memory" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : memory.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: neuron" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : neuron.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin random in path: invalid name random: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: random" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : random.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin sql in path: invalid name sql: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: sql" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : sql.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin test in path: invalid name test: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: test" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : test.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin zmq in path: invalid name zmq: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading yaml file for source: zmq" file="meta/yamlConfigMeta.go:50"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for source : zmq.json" file="meta/sourceMeta.go:133"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin edgex in path: invalid name edgex: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: edgex.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin file in path: invalid name file: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: file.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin influx in path: invalid name influx: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: influx.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: log.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin memory in path: invalid name memory: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: memory.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin mqtt in path: invalid name mqtt: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: mqtt.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin neuron in path: invalid name neuron: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: neuron.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin nop in path: invalid name nop: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: nop.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: redis.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin rest in path: invalid name rest: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: rest.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin sql in path: invalid name sql: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: sql.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin tdengine in path: invalid name tdengine: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: tdengine.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin zmq in path: invalid name zmq: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=info msg="Loading metadata file for sink: zmq.json" file="meta/sinkMeta.go:256"
+time="2022-11-04 10:01:26" level=info msg="funcMeta file : accumulateWordCount.json" file="meta/func_meta.go:152"
+time="2022-11-04 10:01:26" level=info msg="funcMeta file : countPlusOne.json" file="meta/func_meta.go:152"
+time="2022-11-04 10:01:26" level=info msg="funcMeta file : echo.json" file="meta/func_meta.go:152"
+time="2022-11-04 10:01:26" level=info msg="funcMeta file : geohash.json" file="meta/func_meta.go:152"
+time="2022-11-04 10:01:26" level=info msg="funcMeta file : image.json" file="meta/func_meta.go:152"
+time="2022-11-04 10:01:26" level=info msg="funcMeta file : internal.json" file="meta/func_meta.go:152"
+time="2022-11-04 10:01:26" level=info msg="funcMeta file : labelImage.json" file="meta/func_meta.go:152"
+time="2022-11-04 10:01:26" level=info msg="funcMeta file : windows.json" file="meta/func_meta.go:152"
+time="2022-11-04 10:01:26" level=info msg="uiMsg file : en_US.ini" file="meta/msgUtil.go:52"
+time="2022-11-04 10:01:26" level=info msg="uiMsg file : zh_CN.ini" file="meta/msgUtil.go:52"
+time="2022-11-04 10:01:26" level=info msg="Starting rules" file="server/server.go:96"
+time="2022-11-04 10:01:26" level=info msg="Init rule with options &{IsEventTime:false LateTol:1000 Concurrency:1 BufferLength:1024 SendMetaToSink:false SendError:true Qos:0 CheckpointInterval:300000}" file="planner/planner.go:43"
+time="2022-11-04 10:01:26" level=info msg="Rule achilles1_release is replaced." file="processor/rule.go:92"
+time="2022-11-04 10:01:26" level=info msg="Rule achilles1_release was started." file="server/server.go:102"
+time="2022-11-04 10:01:26" level=info msg="Opening stream" file="topo/topo.go:137" rule=achilles1_release
+time="2022-11-04 10:01:26" level=info msg="open sink node 1 instances" file="node/sink_node.go:119" rule=achilles1_release
+time="2022-11-04 10:01:26" level=info msg="open source node edge with option &{  JSON  iotedge true   false  0 }" file="node/source_node.go:73" rule=achilles1_release
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin eh in path: invalid name eh: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:52" rule=achilles1_release
+time="2022-11-04 10:01:26" level=error msg="closing rule achilles1_release for error: sink eh not found" file="server/rule_manager.go:119"
+time="2022-11-04 10:01:26" level=error msg="runtime error: <nil>" file="infra/saferun.go:52" rule=achilles1_release
+time="2022-11-04 10:01:26" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=achilles1_release
+time="2022-11-04 10:01:26" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=achilles1_release
+time="2022-11-04 10:01:26" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=achilles1_release
+time="2022-11-04 10:01:26" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=achilles1_release
+time="2022-11-04 10:01:26" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2022-11-04 10:01:26" level=info msg="open source node with props map[format:json key:], concurrency: 1, bufferLength: 102400" file="node/source_node.go:116" rule=achilles1_release
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin iotedge in path: invalid name iotedge: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:52" rule=achilles1_release
+time="2022-11-04 10:01:26" level=info msg="Init rule with options &{IsEventTime:false LateTol:1000 Concurrency:1 BufferLength:1024 SendMetaToSink:false SendError:true Qos:0 CheckpointInterval:300000}" file="planner/planner.go:43"
+time="2022-11-04 10:01:26" level=info msg="Rule achilles1 is replaced." file="processor/rule.go:92"
+time="2022-11-04 10:01:26" level=info msg="Rule achilles1 was started." file="server/server.go:102"
+time="2022-11-04 10:01:26" level=info msg="Opening stream" file="topo/topo.go:137" rule=achilles1
+time="2022-11-04 10:01:26" level=info msg="open source node edge with option &{  JSON  iotedge true   false  0 }" file="node/source_node.go:73" rule=achilles1
+time="2022-11-04 10:01:26" level=info msg="open sink node 1 instances" file="node/sink_node.go:119" rule=achilles1
+time="2022-11-04 10:01:26" level=info msg="register rest endpoint for component plugin" file="server/rest.go:125"
+time="2022-11-04 10:01:26" level=warning msg="cannot find the native plugin eh in path: invalid name eh: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:26" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:52" rule=achilles1
+time="2022-11-04 10:01:26" level=info msg="register rest endpoint for component portable" file="server/rest.go:125"
+time="2022-11-04 10:01:26" level=error msg="closing rule achilles1 for error: sink eh not found" file="server/rule_manager.go:119"
+time="2022-11-04 10:01:26" level=error msg="runtime error: <nil>" file="infra/saferun.go:52" rule=achilles1
+time="2022-11-04 10:01:26" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=achilles1
+time="2022-11-04 10:01:26" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=achilles1
+time="2022-11-04 10:01:26" level=info msg="register rest endpoint for component schema" file="server/rest.go:125"
+time="2022-11-04 10:01:27" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2022-11-04 10:01:27" level=info msg="open source node with props map[format:json key:], concurrency: 1, bufferLength: 102400" file="node/source_node.go:116" rule=achilles1
+time="2022-11-04 10:01:27" level=warning msg="cannot find the native plugin iotedge in path: invalid name iotedge: not exist" file="native/manager.go:636"
+time="2022-11-04 10:01:27" level=info msg="register rest endpoint for component service" file="server/rest.go:125"
+time="2022-11-04 10:01:27" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:52" rule=achilles1
+time="2022-11-04 10:01:26" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=achilles1
+time="2022-11-04 10:01:27" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=achilles1
+time="2022-11-04 10:01:27" level=info msg="register rest endpoint for component template" file="server/rest.go:125"
+time="2022-11-04 10:01:27" level=info msg="register rest endpoint for component meta" file="server/rest.go:125"
+time="2022-11-04 10:01:27" level=info msg="start service prometheus" file="server/server.go:123"
+time="2022-11-04 10:01:27" level=info msg="start service rpc" file="server/server.go:123"
+time="2022-11-04 10:01:27" level=info msg="Serving kuiper (version - unknown) on port 20498, and restful api on http://0.0.0.0:9081. \n" file="server/server.go:133"
+time="2022-11-04 10:06:16" level=info msg="Rule rule_edge111 is created." file="processor/rule.go:55"
+time="2022-11-04 10:06:16" level=info msg="Init rule with options &{IsEventTime:false LateTol:1000 Concurrency:1 BufferLength:1024 SendMetaToSink:false SendError:true Qos:0 CheckpointInterval:300000}" file="planner/planner.go:43"
+time="2022-11-04 10:06:16" level=info msg="Rule rule_edge111 is replaced." file="processor/rule.go:92"
+time="2022-11-04 10:06:16" level=info msg="Opening stream" file="topo/topo.go:137" rule=rule_edge111
+time="2022-11-04 10:06:16" level=info msg="open source node edge with option &{  JSON  iotedge true   false  0 }" file="node/source_node.go:73" rule=rule_edge111
+time="2022-11-04 10:06:16" level=info msg="open sink node 1 instances" file="node/sink_node.go:119" rule=rule_edge111
+time="2022-11-04 10:06:16" level=warning msg="cannot find the native plugin ecPG in path: invalid name ecPG: not exist" file="native/manager.go:636"
+time="2022-11-04 10:06:16" level=error msg="runtime error: sink ecPG not found" file="infra/saferun.go:52" rule=rule_edge111
+time="2022-11-04 10:06:16" level=error msg="closing rule rule_edge111 for error: sink ecPG not found" file="server/rule_manager.go:119"
+time="2022-11-04 10:06:16" level=error msg="runtime error: <nil>" file="infra/saferun.go:52" rule=rule_edge111
+time="2022-11-04 10:06:16" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=rule_edge111
+time="2022-11-04 10:06:16" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=rule_edge111
+time="2022-11-04 10:06:16" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=rule_edge111
+time="2022-11-04 10:06:16" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=rule_edge111
+time="2022-11-04 10:06:16" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2022-11-04 10:06:16" level=info msg="open source node with props map[format:json key:], concurrency: 1, bufferLength: 102400" file="node/source_node.go:116" rule=rule_edge111
+time="2022-11-04 10:06:16" level=warning msg="cannot find the native plugin iotedge in path: invalid name iotedge: not exist" file="native/manager.go:636"
+time="2022-11-04 10:06:16" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:52" rule=rule_edge111

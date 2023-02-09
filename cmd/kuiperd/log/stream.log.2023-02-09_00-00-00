@@ -1,0 +1,222 @@
+time="2023-02-09 08:45:04" level=warning msg="invalid source.httpServerPort configuration 0, set to 10081" file="conf/conf.go:109"
+time="2023-02-09 08:45:04" level=info msg="fail to read init file: open /workspaces/im/m2/ekuiper/cmd/kuiperd/data/init.json: no such file or directory" file="server/server.go:211"
+time="2023-02-09 08:45:04" level=info msg="register component plugin" file="server/server.go:103"
+time="2023-02-09 08:45:04" level=error msg="plugin random open error: plugin.Open(\"/workspaces/im/m2/ekuiper/cmd/kuiperd/plugins/sources/Random\"): plugin was built with a different version of package internal/goarch" file="native/manager.go:686"
+time="2023-02-09 08:45:04" level=error msg="plugin file open error: plugin.Open(\"/workspaces/im/m2/ekuiper/cmd/kuiperd/plugins/sinks/file\"): plugin was built with a different version of package internal/goarch" file="native/manager.go:686"
+time="2023-02-09 08:45:04" level=info msg="register component portable" file="server/server.go:103"
+time="2023-02-09 08:45:04" level=info msg="register component prometheus" file="server/server.go:103"
+time="2023-02-09 08:45:04" level=info msg="register component schema" file="server/server.go:103"
+time="2023-02-09 08:45:04" level=warning msg="cannot read schema directory: open /workspaces/im/m2/ekuiper/cmd/kuiperd/data/schemas/protobuf: no such file or directory" file="schema/registry.go:75"
+time="2023-02-09 08:45:04" level=warning msg="cannot read schema directory: open /workspaces/im/m2/ekuiper/cmd/kuiperd/data/schemas/custom: no such file or directory" file="schema/registry.go:75"
+time="2023-02-09 08:45:04" level=info msg="register component service" file="server/server.go:103"
+time="2023-02-09 08:45:04" level=info msg="register component template" file="server/server.go:103"
+time="2023-02-09 08:45:04" level=info msg="register component meta" file="server/server.go:103"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for source: mqtt" file="meta/yamlConfigMeta.go:67"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for connection: mqtt" file="meta/yamlConfigMeta.go:95"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for source : mqtt_source.json" file="meta/sourceMeta.go:131"
+time="2023-02-09 08:45:04" level=warning msg="Find source metadata file but not installed : edgex.json" file="meta/sourceMeta.go:146"
+time="2023-02-09 08:45:04" level=warning msg="Find source metadata file but not installed : file.json" file="meta/sourceMeta.go:146"
+time="2023-02-09 08:45:04" level=warning msg="Find source metadata file but not installed : httppull.json" file="meta/sourceMeta.go:146"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for source: memory" file="meta/yamlConfigMeta.go:67"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for source : memory.json" file="meta/sourceMeta.go:144"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for source: neuron" file="meta/yamlConfigMeta.go:67"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for source : neuron.json" file="meta/sourceMeta.go:144"
+time="2023-02-09 08:45:04" level=warning msg="Find source metadata file but not installed : random.json" file="meta/sourceMeta.go:146"
+time="2023-02-09 08:45:04" level=warning msg="Find source metadata file but not installed : sql.json" file="meta/sourceMeta.go:146"
+time="2023-02-09 08:45:04" level=warning msg="Find source metadata file but not installed : test.json" file="meta/sourceMeta.go:146"
+time="2023-02-09 08:45:04" level=warning msg="Find source metadata file but not installed : zmq.json" file="meta/sourceMeta.go:146"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: edgex" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: edgex.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: file" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: file.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: influx" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: influx.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: log" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: log.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: memory" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: memory.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: mqtt" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: mqtt.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: neuron" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: neuron.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: nop" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: nop.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: redis" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: redis.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: rest" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: rest.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: sql" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: sql.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: tdengine" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: tdengine.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="Loading yaml file for sink: zmq" file="meta/yamlConfigMeta.go:81"
+time="2023-02-09 08:45:04" level=info msg="Loading metadata file for sink: zmq.json" file="meta/sinkMeta.go:260"
+time="2023-02-09 08:45:04" level=info msg="uiMsg file : en_US.ini" file="meta/msgUtil.go:53"
+time="2023-02-09 08:45:04" level=info msg="uiMsg file : zh_CN.ini" file="meta/msgUtil.go:53"
+time="2023-02-09 08:45:04" level=info msg="Starting rules" file="server/server.go:137"
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41de5dl00000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 41de5dl00000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=41de5dl00000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41de5dl00000
+time="2023-02-09 08:45:04" level=error msg="closing rule 41de5dl00000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41de5dl00000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41de5dl00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41de5dl00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41de5dl00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41de5dl00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41de5dl00000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41dkjg5c0000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=info msg="Rule 41dkjg5c0000 was stopped." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41f14mk80000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 41f14mk80000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=41f14mk80000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41f14mk80000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41f14mk80000
+time="2023-02-09 08:45:04" level=error msg="closing rule 41f14mk80000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41f14mk80000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41f14mk80000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41f14mk80000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41f14mk80000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41f14mk80000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41ng2rgo0000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 41ng2rgo0000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=41ng2rgo0000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41ng2rgo0000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41ng2rgo0000
+time="2023-02-09 08:45:04" level=error msg="closing rule 41ng2rgo0000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41ng2rgo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41ng2rgo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41ng2rgo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41ng2rgo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41ng2rgo0000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41ngq0040000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 41ngq0040000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=41ngq0040000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41ngq0040000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41ngq0040000
+time="2023-02-09 08:45:04" level=error msg="closing rule 41ngq0040000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41ngq0040000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41ngq0040000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41ngq0040000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41ngq0040000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41ngq0040000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41pcb6a00000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 41pcb6a00000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=41pcb6a00000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41pcb6a00000
+time="2023-02-09 08:45:04" level=error msg="closing rule 41pcb6a00000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41pcb6a00000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41pcb6a00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41pcb6a00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41pcb6a00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41pcb6a00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41pcb6a00000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41pdroe00000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 41pdroe00000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=41pdroe00000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41pdroe00000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41pdroe00000
+time="2023-02-09 08:45:04" level=error msg="closing rule 41pdroe00000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41pdroe00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41pdroe00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41pdroe00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41pdroe00000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41pdroe00000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41ni0rlo0000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 41ni0rlo0000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=41ni0rlo0000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41ni0rlo0000
+time="2023-02-09 08:45:04" level=error msg="closing rule 41ni0rlo0000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41ni0rlo0000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41ni0rlo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41ni0rlo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41ni0rlo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41ni0rlo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41ni0rlo0000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 41pcg6ec0000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 41pcg6ec0000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=41pcg6ec0000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41pcg6ec0000
+time="2023-02-09 08:45:04" level=error msg="closing rule 41pcg6ec0000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41pcg6ec0000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41pcg6ec0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41pcg6ec0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41pcg6ec0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41pcg6ec0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41pcg6ec0000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 421kqi280000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 421kqi280000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=421kqi280000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=421kqi280000
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=421kqi280000
+time="2023-02-09 08:45:04" level=error msg="closing rule 421kqi280000 for error: sink eh not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=421kqi280000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=421kqi280000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=421kqi280000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=421kqi280000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=421kqi280000
+time="2023-02-09 08:45:04" level=info msg="Start rulestate 421n4joo0000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:04" level=info msg="Rule 421n4joo0000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:04" level=info msg="Opening stream" file="topo/topo.go:138" rule=421n4joo0000
+time="2023-02-09 08:45:04" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:04" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=421n4joo0000
+time="2023-02-09 08:45:04" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=421n4joo0000
+time="2023-02-09 08:45:04" level=error msg="closing rule 421n4joo0000 for error: source iotedge not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:04" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=421n4joo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=421n4joo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=421n4joo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=421n4joo0000
+time="2023-02-09 08:45:04" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=421n4joo0000
+time="2023-02-09 08:45:05" level=info msg="Start rulestate 41qu0q5k0000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:05" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:05" level=info msg="Rule 41qu0q5k0000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:05" level=info msg="Opening stream" file="topo/topo.go:138" rule=41qu0q5k0000
+time="2023-02-09 08:45:05" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:05" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=41qu0q5k0000
+time="2023-02-09 08:45:05" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=41qu0q5k0000
+time="2023-02-09 08:45:05" level=error msg="closing rule 41qu0q5k0000 for error: sink eh not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:05" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=41qu0q5k0000
+time="2023-02-09 08:45:05" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=41qu0q5k0000
+time="2023-02-09 08:45:05" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=41qu0q5k0000
+time="2023-02-09 08:45:05" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=41qu0q5k0000
+time="2023-02-09 08:45:05" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=41qu0q5k0000
+time="2023-02-09 08:45:05" level=info msg="Start rulestate 421ng8i40000" file="rule/ruleState.go:112"
+time="2023-02-09 08:45:05" level=error msg="runtime error: <nil>" file="infra/saferun.go:57"
+time="2023-02-09 08:45:05" level=info msg="Rule 421ng8i40000 was started." file="server/server.go:148"
+time="2023-02-09 08:45:05" level=info msg="Opening stream" file="topo/topo.go:138" rule=421ng8i40000
+time="2023-02-09 08:45:05" level=warning msg="fail to parse yaml for source iotedge. Return an empty configuration" file="conf/source.go:33"
+time="2023-02-09 08:45:05" level=error msg="runtime error: sink eh not found" file="infra/saferun.go:55" rule=421ng8i40000
+time="2023-02-09 08:45:05" level=error msg="closing rule 421ng8i40000 for error: sink eh not found" file="rule/ruleState.go:166"
+time="2023-02-09 08:45:05" level=error msg="runtime error: source iotedge not found" file="infra/saferun.go:55" rule=421ng8i40000
+time="2023-02-09 08:45:05" level=error msg="runtime error: <nil>" file="infra/saferun.go:55" rule=421ng8i40000
+time="2023-02-09 08:45:05" level=info msg="unary operator 3_project instance 0 cancelling...." file="node/operations.go:149" rule=421ng8i40000
+time="2023-02-09 08:45:05" level=info msg="register rest endpoint for component service" file="server/rest.go:147"
+time="2023-02-09 08:45:05" level=info msg="unary operator 3_project instance 0 done, cancelling future items" file="node/operations.go:107" rule=421ng8i40000
+time="2023-02-09 08:45:05" level=info msg="register rest endpoint for component template" file="server/rest.go:147"
+time="2023-02-09 08:45:05" level=info msg="register rest endpoint for component meta" file="server/rest.go:147"
+time="2023-02-09 08:45:05" level=info msg="unary operator 2_filter instance 0 cancelling...." file="node/operations.go:149" rule=421ng8i40000
+time="2023-02-09 08:45:05" level=info msg="unary operator 2_filter instance 0 done, cancelling future items" file="node/operations.go:107" rule=421ng8i40000
+time="2023-02-09 08:45:05" level=info msg="register rest endpoint for component plugin" file="server/rest.go:147"
+time="2023-02-09 08:45:05" level=info msg="register rest endpoint for component portable" file="server/rest.go:147"
+time="2023-02-09 08:45:05" level=info msg="register rest endpoint for component prometheus" file="server/rest.go:147"
+time="2023-02-09 08:45:05" level=info msg="register rest endpoint for component schema" file="server/rest.go:147"
+time="2023-02-09 08:45:05" level=info msg="Serving kuiper (version - unknown) on port 20498, and restful api on http://0.0.0.0:9081. \n" file="server/server.go:179"

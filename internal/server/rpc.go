@@ -22,11 +22,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/lf-edge/ekuiper/internal/conf"
-	"github.com/lf-edge/ekuiper/internal/pkg/model"
-	"github.com/lf-edge/ekuiper/internal/topo/rule"
-	"github.com/lf-edge/ekuiper/internal/topo/sink"
-	"github.com/lf-edge/ekuiper/pkg/infra"
 	"io"
 	"net/http"
 	"net/rpc"
@@ -36,7 +31,9 @@ import (
 
 	"github.com/lf-edge/ekuiper/internal/conf"
 	"github.com/lf-edge/ekuiper/internal/pkg/model"
+	"github.com/lf-edge/ekuiper/internal/topo/rule"
 	"github.com/lf-edge/ekuiper/internal/topo/sink"
+	"github.com/lf-edge/ekuiper/pkg/infra"
 )
 
 const QueryRuleId = "internal-ekuiper_query_rule"
@@ -365,7 +362,7 @@ func marshalDesc(m interface{}) (string, error) {
 	return dst.String(), nil
 }
 
-func init() {
+func initQuery() {
 	ticker := time.NewTicker(time.Second * 5)
 	go infra.SafeRun(func() error {
 		for {
@@ -375,14 +372,13 @@ func init() {
 					continue
 				}
 
-					n := time.Now()
-					w := 10 * time.Second
-					if v := n.Sub(sink.QR.LastFetch); v >= w {
-						logger.Printf("The client seems no longer fetch the query result, stop the query now.")
-						stopQuery()
-					}
+				n := time.Now()
+				w := 10 * time.Second
+				if v := n.Sub(sink.QR.LastFetch); v >= w {
+					logger.Printf("The client seems no longer fetch the query result, stop the query now.")
+					stopQuery()
 				}
 			}
-		})
-	*/
+		}
+	})
 }

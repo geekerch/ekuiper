@@ -17,9 +17,10 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	zmq "github.com/pebbe/zmq4"
 	"os"
 	"time"
+
+	zmq "github.com/pebbe/zmq4"
 )
 
 type zmqPub struct {

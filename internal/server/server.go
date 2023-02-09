@@ -25,6 +25,8 @@ import (
 	"syscall"
 	"time"
 
+	"path/filepath"
+
 	"github.com/lf-edge/ekuiper/internal/binder/function"
 	"github.com/lf-edge/ekuiper/internal/binder/io"
 	"github.com/lf-edge/ekuiper/internal/binder/meta"
@@ -33,13 +35,9 @@ import (
 	"github.com/lf-edge/ekuiper/internal/pkg/store"
 	"github.com/lf-edge/ekuiper/internal/processor"
 	"github.com/lf-edge/ekuiper/internal/topo/connection/factory"
-	"net/http"
-	"os"
-	"os/signal"
-	"path/filepath"
-	"sort"
-	"syscall"
-	"time"
+	"github.com/lf-edge/ekuiper/internal/topo/rule"
+	"github.com/lf-edge/ekuiper/pkg/api"
+	"github.com/lf-edge/ekuiper/pkg/ast"
 )
 
 var (
@@ -82,7 +80,7 @@ func createPaths() {
 
 }
 
-func StartUp(Version, LoadFileType string) {
+func StartUp(Version, LoadFileType string, sources map[string]api.Source, sinks map[string]api.Sink) {
 	version = Version
 	conf.LoadFileType = LoadFileType
 	startTimeStamp = time.Now().Unix()

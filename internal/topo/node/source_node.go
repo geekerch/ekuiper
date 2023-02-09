@@ -16,7 +16,6 @@ package node
 
 import (
 	"fmt"
-	"strings"
 	"sync"
 
 	"github.com/lf-edge/ekuiper/internal/conf"
@@ -29,7 +28,6 @@ import (
 	"github.com/lf-edge/ekuiper/pkg/ast"
 	"github.com/lf-edge/ekuiper/pkg/cast"
 	"github.com/lf-edge/ekuiper/pkg/infra"
-	"sync"
 )
 
 type SourceNode struct {
@@ -139,7 +137,7 @@ func (m *SourceNode) Open(ctx api.StreamContext, errCh chan<- error) {
 							buffer.Close()
 						}()
 
-						stats, err := metric.NewStatManager(ctx, "source")
+						stats, err = metric.NewStatManager(ctx, "source")
 						if err != nil {
 							return err
 						}

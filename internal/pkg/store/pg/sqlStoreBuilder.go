@@ -1,8 +1,6 @@
 package pg
 
-import (
-	"github.com/lf-edge/ekuiper/pkg/kv"
-)
+import "github.com/lf-edge/ekuiper/pkg/kv"
 
 type StoreBuilder struct {
 	database Database
